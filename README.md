@@ -22,10 +22,21 @@ def basic_operation(num1, num2, operation):
 As you may see, the code takes two numers and one operator, and makes the correspondent operation.
 
 ## 2. Do you even know what a palindrome is? Find out here.
-A palindrome is a word, phrase, etc, that will be the same whether you read it forward or backward- A real intelectual exercise, if you wanna create them. I can help you estimate if it really is a palindrome. Type the word, phrase, whatever, and it should tell you if it's exactly the same.
+A palindrome is a word, phrase, etc, that will be the same whether you read it forward or backward - a real intelectual exercise, if you want to create them. This code helps you estimate if it really is a palindrome. Type the word, phrase, whatever, and it should tell you if it's exactly the same.
 
 ```
+def is_palindrome(string):
+    string = string.replace(" ", "").lower()
+    counter = 0
+    for char in range(len(string)):
+        if string[char] == string[len(string) - char -1]:
+                counter += 1
+        else: pass
+    if counter == len(string):
+        return True
+    else: return False
 ```
+It takes the string, makes it understandable and then evaluates each character with its couterpart. Easier said than done.
 
 ## 3. Memorizing all the prime numbers is hard.
 But they are exigent numbers which makes them easier to find. Apart from 2 and 3, any other prime number can be written with the formula "6n + 1" or "6n – 1". But don't worry, this code can save you doing such a complicate computation.
